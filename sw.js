@@ -1,4 +1,4 @@
-const V='fillview-v5',LIB='fillview-libs';
+const V='fillview-v7',LIB='fillview-libs';
 const FILES=['./','./index.html','./manifest.json','./icon-192.png','./icon-512.png','./icon-maskable-512.png','./apple-touch-icon.png','./favicon.png'];
 const LIB_HOSTS=['cdn.jsdelivr.net'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>Promise.all(FILES.map(f=>c.add(f).catch(()=>null)))).then(()=>self.skipWaiting()))});
